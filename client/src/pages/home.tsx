@@ -13,10 +13,11 @@ const Home = () => {
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+      const href = target.getAttribute('href');
+      
+      if (target.tagName === 'A' && href?.startsWith('#') && href.length > 1) {
         e.preventDefault();
-        const targetId = target.getAttribute('href');
-        const targetElement = document.querySelector(targetId as string);
+        const targetElement = document.querySelector(href);
         
         if (targetElement) {
           window.scrollTo({

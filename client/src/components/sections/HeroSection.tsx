@@ -55,16 +55,12 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Link href="#contact">
-              <a className="px-8 py-3 bg-white text-primary font-medium rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                Get Started
-              </a>
-            </Link>
-            <Link href="#features">
-              <a className="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition duration-300">
-                Learn More
-              </a>
-            </Link>
+            <a href="#contact" className="px-8 py-3 bg-white text-primary font-medium rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              Get Started
+            </a>
+            <a href="#features" className="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition duration-300">
+              Learn More
+            </a>
           </motion.div>
         </div>
       </div>
